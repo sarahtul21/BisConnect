@@ -141,7 +141,7 @@ const Charts = () => {
         labels: Data.map((data) => data.day), 
         datasets: [
           {
-            label: "website views ber day ",
+            label: "views",
             data: Data.map((data) => data.views),
             backgroundColor: "#313A4E",
             hoverBackgroundColor: '#65b946',
@@ -155,7 +155,7 @@ const Charts = () => {
         labels: DataH.map((data) => data.hour), 
         datasets: [
           {
-            label: "website views ber hour",
+            label: "views",
             data: DataH.map((data) => data.views),
             backgroundColor: "#313A4E",
             hoverBackgroundColor: '#65b946',
@@ -169,7 +169,7 @@ const Charts = () => {
         labels: DataD.map((data) => data.type), 
         datasets: [
           {
-            label: "%",
+            label: "",
             data: DataD.map((data) => data.views),
             backgroundColor: [
                 '#f0f2f5',
@@ -243,12 +243,21 @@ const Charts = () => {
                         </svg>
                             Devices Used
                         </h2>
-                        <p className='font-bold text-[#65b946]'>"%"</p>
+                        
                     </div>
                     <Doughnut
                     data={chartDataD}
                     options={{
                         plugins: {
+                         tooltip: {
+                             callbacks: {
+                                  label: function (context) {
+                                      return `${context.formattedValue}%`;
+                                },
+                             },                            
+
+                                 displayColors: false,
+                             },
                         title: {
                             display: false,
                             text: "Devices"
