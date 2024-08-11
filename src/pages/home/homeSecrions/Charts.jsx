@@ -245,7 +245,6 @@ const Charts = () => {
                         </svg>
                             Devices Used
                         </h2>
-                        <p className='font-bold text-[#65b946]'>"%"</p>
                     </div>
                     <Doughnut
                     data={chartDataD}
