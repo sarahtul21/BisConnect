@@ -141,7 +141,7 @@ const Charts = () => {
         labels: Data.map((data) => data.day), 
         datasets: [
           {
-            label: "website views ber day ",
+            label: "views",
             data: Data.map((data) => data.views),
             backgroundColor: "#313A4E",
             hoverBackgroundColor: '#65b946',
@@ -155,7 +155,7 @@ const Charts = () => {
         labels: DataH.map((data) => data.hour), 
         datasets: [
           {
-            label: "website views ber hour",
+            label: "views",
             data: DataH.map((data) => data.views),
             backgroundColor: "#313A4E",
             hoverBackgroundColor: '#65b946',
@@ -169,7 +169,7 @@ const Charts = () => {
         labels: DataD.map((data) => data.type), 
         datasets: [
           {
-            label: "%",
+            label: "",
             data: DataD.map((data) => data.views),
             backgroundColor: [
                 '#f0f2f5',
@@ -182,6 +182,8 @@ const Charts = () => {
           }
         ]
     });
+
+    
     
     return (
         <div className="container px-5 m-auto mb-10">
@@ -249,13 +251,21 @@ const Charts = () => {
                     data={chartDataD}
                     options={{
                         plugins: {
-                        title: {
-                            display: false,
-                            text: "Devices"
-                        },
-                        legend: {
-                            display: true
-                        }
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.formattedValue}%`;
+                                    },
+                                },
+                                displayColors: false,
+                            },
+                            title: {
+                                display: false,
+                                text: "Devices"
+                            },
+                            legend: {
+                                display: true
+                            }
                         }
                     }}
                     />
@@ -284,18 +294,19 @@ const Charts = () => {
                                 max: 50,
                                 min: 0,
                                 ticks: {
-                                    stepSize: 20
+                                    stepSize: 10
                                 }
                             }
                         },
-                        plugins: {
+                        plugins:{
                             title: {
                                 display: false,
                             },
                             legend: {
                                 display: false,
-                            }
-                        }
+                            },
+                        } 
+                        
                     }}
                 />
             </div>
