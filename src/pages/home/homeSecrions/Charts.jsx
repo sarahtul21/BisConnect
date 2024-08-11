@@ -182,6 +182,8 @@ const Charts = () => {
           }
         ]
     });
+
+    
     
     return (
         <div className="container px-5 m-auto mb-10">
@@ -243,28 +245,26 @@ const Charts = () => {
                         </svg>
                             Devices Used
                         </h2>
-                        
                     </div>
                     <Doughnut
                     data={chartDataD}
                     options={{
                         plugins: {
-                         tooltip: {
-                             callbacks: {
-                                  label: function (context) {
-                                      return `${context.formattedValue}%`;
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.formattedValue}%`;
+                                    },
                                 },
-                             },                            
-
-                                 displayColors: false,
-                             },
-                        title: {
-                            display: false,
-                            text: "Devices"
-                        },
-                        legend: {
-                            display: true
-                        }
+                                displayColors: false,
+                            },
+                            title: {
+                                display: false,
+                                text: "Devices"
+                            },
+                            legend: {
+                                display: true
+                            }
                         }
                     }}
                     />
@@ -293,18 +293,19 @@ const Charts = () => {
                                 max: 50,
                                 min: 0,
                                 ticks: {
-                                    stepSize: 20
+                                    stepSize: 10
                                 }
                             }
                         },
-                        plugins: {
+                        plugins:{
                             title: {
                                 display: false,
                             },
                             legend: {
                                 display: false,
-                            }
-                        }
+                            },
+                        } 
+                        
                     }}
                 />
             </div>
