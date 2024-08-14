@@ -6,11 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        
-        'dark-text': "rgba(0, 0, 0, 1)",
-        'light-text': "#b89867",
-        'main-color-gradient': "var(--main-color-gradient)",
-        'second-color-gradient': "var(--second-color-gradient)"
+        'main-color': "#65b946",
+        'second-color': "#313A4E",
+        'third-color': "#f0f2f5"
       },
       
       height: {

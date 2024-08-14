@@ -198,8 +198,8 @@ const Charts = () => {
                             Website views
                         </h2>
                         <div className='flex items-center gap-2'>
-                            <p className='text-xs'>updated <span className='text-[#65b946]'>1hour</span> ago</p>
-                            <button className="btn border-none btn-sm bg-[#65b946] text-white hover:bg-[#313A4E]">
+                            <p className='text-xs'>updated <span className='text-main-color'>1hour</span> ago</p>
+                            <button className="btn border-none btn-sm bg-main-color text-white hover:bg-second-color">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.6998 2.92664L15.6204 4.27208C14.3294 2.38304 12.5558 1.21424 10.2998 0.765916C8.0304 0.331036 5.93064 0.759196 4.0008 2.05016C2.08464 3.34112 0.909123 5.12144 0.474243 7.39112C0.025683 9.67424 0.447123 11.774 1.73808 13.6902C3.04272 15.6063 4.82304 16.7888 7.07904 17.2371H7.09944C9.36888 17.672 11.4619 17.2438 13.3781 15.9529C15.2671 14.689 16.4426 12.9495 16.9046 10.7343C16.9046 10.7206 16.2523 10.5781 14.9477 10.3062C14.5944 11.9914 13.6973 13.3232 12.2568 14.3017C10.8026 15.2802 9.21264 15.5996 7.48656 15.2598C5.74704 14.9199 4.38792 14.023 3.40944 12.5689C2.41728 11.101 2.09112 9.50432 2.43096 7.77824C2.7708 6.0524 3.66768 4.7 5.12184 3.72152C6.58968 2.72936 8.1864 2.4032 9.91248 2.74304H9.93288C11.6316 3.0692 12.977 3.95264 13.9692 5.39312L11.7881 6.94232L16.7417 8.0228L17.6998 2.9264V2.92664Z" fill="white"/>
                                 </svg>
@@ -268,7 +268,7 @@ const Charts = () => {
                         <ClockIcon />
                         <div>
                             <p className='text-sm text-start'>Site Attendance Times</p>
-                            <p className='text-[#65b946] text-sm text-start'>last 12 hours</p>
+                            <p className='text-main-color text-sm text-start'>last 12 hours</p>
                         </div>
                     </div>
                     <div className='flex items-center gap-2'>

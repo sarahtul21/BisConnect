@@ -30,7 +30,7 @@ export default function NavBar () {
                         <label for="sidebar-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu z-20 p-4 w-80 min-h-full bg-white text-black pt-[68px]">
                             {/* <!-- Sidebar content here --> */}
-                            <li><a className='text-[#65b946]'>Main</a></li>
+                            <li><a className='text-main-color'>Main</a></li>
                             <li><a className=''>About us</a></li>
                             <li><a>Projects</a></li>
                             <li><a>News</a></li>
@@ -49,7 +49,7 @@ export default function NavBar () {
 {/*  */}
             <div className="navbar-center hidden md:flex">
                 {/* search */}
-                <label className="input  bg-[#f0f2f5] text-black rounded-lg input-bordered flex items-center gap-2">
+                <label className="input  bg-third-color text-black rounded-lg input-bordered flex items-center gap-2">
                     <input type="text" className="grow" placeholder="Search" />
                     <SearchIcon />
                 </label>
